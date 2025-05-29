@@ -67,7 +67,6 @@ function navigateMenu(event, sectionId) {
   if(sectionId === 'ตารางเรียน') showDefaultScheduleImage();
 }
 document.addEventListener('DOMContentLoaded', () => {
-  showDefaultHomeworkImages();
   showDefaultScheduleImage();
 });
 
@@ -130,9 +129,6 @@ function addHomework() {
 function showDefaultHomeworkImages() {
   const preview = document.getElementById('uploadedImagePreview');
   const list = document.getElementById('homeworkList');
-  if (!preview.hasChildNodes() || preview.innerHTML.trim() === '') {
-    preview.innerHTML = '<span class="no-data">ยังไม่มีข้อมูล</span>';
-  }
   if (!list.hasChildNodes() || list.innerHTML.trim() === '') {
     list.innerHTML = '<span class="no-data">ยังไม่มีข้อมูล</span>';
   }
